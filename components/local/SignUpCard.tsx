@@ -13,18 +13,19 @@ import { Separator } from '../ui/separator'
 import { FcGoogle } from 'react-icons/fc'
 import { FaGithub } from 'react-icons/fa'
 
-export default function LoginCard({setCard}) {
+export default function SignUpCard({setCard}) {
   return (
     <Card>
         <CardHeader>
-            <CardTitle>Login to continue</CardTitle>
-            <CardDescription>Use your Email or other service to continue</CardDescription>
+            <CardTitle>Sign up</CardTitle>
+            <CardDescription>Use your Email to create an account</CardDescription>
         </CardHeader>
 
         <CardContent>
             <form className='space-y-3 flex flex-col mb-4'>
                 <Input type='email' placeholder='Email' />
                 <Input type='password' placeholder='Password' />
+                <Input type='password' placeholder='Confirm Password' />
                 <Button className='w-full'>Continue</Button>
             </form>
 
@@ -46,11 +47,11 @@ export default function LoginCard({setCard}) {
 
 
         <CardFooter className=''>
-            <p>Don&apos;t have an account ? &nbsp;
+            <p>Already have an account ?
             <span 
                 className='text-sky-600 cursor-pointer hover:underline'
-                onClick={()=>{setCard('signUp')}}
-            >Sign up</span></p>
+                onClick={()=>{setCard('login')}}
+                >Login</span></p>
         </CardFooter>
     </Card>
 
