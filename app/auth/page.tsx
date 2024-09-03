@@ -10,7 +10,8 @@ export default function Auth() {
   };
 
   return (
-    <div className='bg-[#5b3a59] h-screen flex justify-center items-center'>
+    // 备用颜色  #5b3a59
+    <div className='bg-[#b6afe7] h-screen flex justify-center items-center'>
       
       <div className='min-w-[30rem] h-auto'>
         { (authCard === 'signIn') ?

@@ -1,12 +1,5 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+'use client'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button, buttonVariants } from "../ui/button";
 import { Input } from "../ui/input";
 import { Separator } from "../ui/separator";
@@ -54,22 +47,22 @@ export default function SignUpCard({ setCard }: AuthCardProps) {
 
       <CardContent>
         <form onSubmit={onPasswordSignUp} className="space-y-3 flex flex-col mb-4">
-            <Input name="userName" type="text" placeholder="User Name" 
+            <Input name="userName" type="text" placeholder="User Name" disabled={pending}
                 onChange={(e)=>{setUserForm( prevForm => ({
                     ...prevForm,
                     name: e.target.value
                 }) ) }} />
-            <Input name="email" type="email" placeholder="Email" 
+            <Input name="email" type="email" placeholder="Email" disabled={pending}
                 onChange={(e)=>{setUserForm( prevForm => ({
                     ...prevForm,
                     email: e.target.value
                 }) ) }} />
-            <Input name="password" type="password" placeholder="Password"
+            <Input name="password" type="password" placeholder="Password" disabled={pending}
                 onChange={(e)=>{setUserForm( prevForm => ({
                     ...prevForm,
                     password: e.target.value
                 }) ) }} />
-            <Input name="confirmPassword" type="password" placeholder="Confirm Password" 
+            <Input name="confirmPassword" type="password" placeholder="Confirm Password" disabled={pending}
                 onChange={(e)=>{setUserForm( prevForm => ({
                     ...prevForm,
                     confirmPassword: e.target.value
@@ -81,11 +74,11 @@ export default function SignUpCard({ setCard }: AuthCardProps) {
         <Separator />
 
         <div className="flex flex-col gap-3 mt-4">
-          <Button variant={"outline"} className="w-full relative">
+          <Button variant={"outline"} className="w-full relative" disabled={pending}>
             <FcGoogle className="absolute left-5 size-5" />
             Sign up with Google
           </Button>
-          <Button variant={"outline"} className="w-full relative">
+          <Button variant={"outline"} className="w-full relative" disabled={pending}>
             <FaGithub className="absolute left-5 size-5" />
             Sign up with Github
           </Button>
