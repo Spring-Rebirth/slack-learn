@@ -11,7 +11,7 @@ import {
 // cSpell:word lucide
 import { Loader, LogOut } from "lucide-react";
 import { useAuthActions } from "@convex-dev/auth/react";
-import { useCurrentUser } from "@/hooks/useCurrentUser";
+import { useCurrentUser } from "@/api/useCurrentUser";
 
 export default function UserMenu() {
   const { signOut } = useAuthActions();
