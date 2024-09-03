@@ -31,7 +31,7 @@ export default function UserMenu() {
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <Avatar className="hover:opacity-75">
+          <Avatar className="hover:opacity-75 size-16">
           <AvatarImage src={image} />
           <AvatarFallback>CN</AvatarFallback>
           </Avatar>
