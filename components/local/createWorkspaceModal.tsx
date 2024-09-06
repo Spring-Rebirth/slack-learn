@@ -8,6 +8,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useCreateWorkspaceModal } from "@/store/useCreateWorkspaceModal";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 export const CreateWorkspaceModal = () => {
   const [open, setOpen] = useCreateWorkspaceModal();
@@ -23,6 +25,14 @@ export const CreateWorkspaceModal = () => {
         <DialogHeader>
           <DialogTitle>Add a workspace</DialogTitle>
         </DialogHeader>
+        <Input
+          type="text"
+          placeholder="Enter a name for your workspace"
+          disabled={false}
+        />
+        <div className="flex justify-end">
+          <Button>Create</Button>
+        </div>
       </DialogContent>
     </Dialog>
   );
